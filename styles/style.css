@@ -50,11 +50,12 @@
   align-items: center;
   border: 2px solid currentColor;
   padding: clamp(7.625rem, 2.462vw + 7.048rem, 8.125rem) 0;
-  margin-block-end: 100px;
+  margin-block-end: clamp(94px, 100px + (94 - 100) * (100vw - 375px) / (1440 - 375), 100px); /* Формула для расчета margin-block-end */
 }
 
 .header__logo {
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+  text-decoration: none;
 }
 
 .header__title {
@@ -74,6 +75,7 @@
 
 .card__image-wrapper {
   position: relative;
+  min-inline-size: 371px;
   border-inline: 2px solid currentColor;
 }
 
@@ -107,6 +109,7 @@
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 1 / 1;
 }
 
 .card__text-block {
@@ -251,7 +254,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 17px 20px;
+  padding: 15px 20px;
   background-color: var(--bg-color);
   @media (width <= 375px) {
     flex-direction: column;
@@ -261,6 +264,7 @@
 .floppy-close {
   inline-size: 100%;
   padding-block: 12.5px;
+  text-transform: uppercase;
 }
 
 .floppy-popup {
@@ -275,6 +279,13 @@
 
 .floppy-icon {
   flex-shrink: 0;
+}
+
+.floppy-button .floppy-icon {
+  @media (width <= 375px) {
+    inline-size: 28px;
+    block-size: 28px;
+  }
 }
 
 .text-button .floppy-icon {
@@ -298,30 +309,22 @@
   overflow: hidden;
 }
 
-.card:nth-child(1) .card__image {
-  filter: brightness(50%);
+.filter-brightness {
+  filter: brightness(70%);
 }
 
-.card:nth-child(2) .card__image {
-  filter: brightness(60%) contrast(80%) blur(5px);
+.filter-contrast {
+  filter: contrast(80%)
 }
 
-.card:nth-child(3) .card__image {
-  filter: sepia(0.3) grayscale(30%) brightness(60%);
+.filter-grayscale {
+  filter: grayscale(1);
 }
 
-.card:nth-child(4) .card__image {
-  filter: grayscale(1) brightness(60%);
+.filter-saturate {
+  filter: saturate(120%);
 }
 
-.card:nth-child(5) .card__image {
-  filter: contrast(80%) saturate(200%);
-}
-
-.card:nth-child(6) .card__image {
+.filter-hue-rotate {
   filter: hue-rotate(0.5turn);
-}
-
-.card:nth-child(7) .card__image {
-  filter: opacity(60%);
 }
