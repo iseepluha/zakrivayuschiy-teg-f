@@ -314,7 +314,7 @@
 }
 
 .filter-contrast {
-  filter: contrast(80%)
+  filter: contrast(90%);
 }
 
 .filter-grayscale {
@@ -327,4 +327,12 @@
 
 .filter-hue-rotate {
   filter: hue-rotate(0.5turn);
+}
+
+.filter-sepia {
+  filter: sepia(50%);
+}
+
+.filter-invert {
+  filter: invert(100%);
 }
