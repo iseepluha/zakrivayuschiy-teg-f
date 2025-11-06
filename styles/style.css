@@ -313,8 +313,8 @@
   filter: brightness(70%);
 }
 
-.filter-contrast {
-  filter: contrast(90%);
+.filter-contrast-saturate {
+  filter: contrast(90%) saturate(120%);
 }
 
 .filter-grayscale {
