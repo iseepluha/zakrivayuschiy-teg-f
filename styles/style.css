@@ -163,11 +163,7 @@
   color: var(--bg-color);
 }
 
-<<<<<<< HEAD
 .card__buttons-wrapper {
-=======
-.card__buttons-wrapper{
->>>>>>> d32086080e077ad37665857db2597dd3f2ec9b09
   display: flex;
   gap: 6px;
   justify-content: end;
@@ -196,11 +192,7 @@
 }
 
 .main-body {
-<<<<<<< HEAD
   transition: fill 0.3s linear;
-=======
-  transition: fill 0.3s linear; 
->>>>>>> d32086080e077ad37665857db2597dd3f2ec9b09
 }
 
 .core {
@@ -213,11 +205,7 @@
 
 .like-icon:hover .main-body {
   fill: var(--primary-color);
-<<<<<<< HEAD
   transition: fill 0.3s 0.05s linear;
-=======
-  transition: fill 0.3s 0.05s linear; 
->>>>>>> d32086080e077ad37665857db2597dd3f2ec9b09
 }
 
 .like-icon:hover .core {
@@ -286,11 +274,7 @@
 }
 
 .floppy-icon {
-<<<<<<< HEAD
   flex-shrink: 0;
-=======
-  flex-shrink: 0; 
->>>>>>> d32086080e077ad37665857db2597dd3f2ec9b09
 }
 
 .text-button .floppy-icon {
